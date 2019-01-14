@@ -12,7 +12,7 @@ router.get('/', Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res
     });
 });
 
-router.get('/facebook', passport.authenticate('facebook'), function(req, res) {});
+/*router.get('/facebook', passport.authenticate('facebook'), function(req, res) {});
 
 router.get('/facebook/callback', function(req, res, next) {
     passport.authenticate('facebook', function(err, user, info) {
@@ -41,7 +41,7 @@ router.get('/facebook/callback', function(req, res, next) {
             });
         });
     })(req, res, next);
-});
+});*/
 
 router.post('/register', function(req, res) {
     User.register(new User({ username : req.body.username }),

@@ -10,7 +10,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-exports.facebook = passport.use(new FacebookStrategy({
+/*exports.facebook = passport.use(new FacebookStrategy({
     clientID: config.facebook.clientID,
     clientSecret: config.facebook.clientSecret,
     callbackURL: config.facebook.callbackURL
@@ -40,4 +40,4 @@ function(accessToken, refreshToken, profile, done) {
         }
     });
 }
-));
+));*/
