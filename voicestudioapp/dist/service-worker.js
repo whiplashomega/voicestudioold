@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.b59982ebc3a32199da9835d40f4a7374.js"
+  "/precache-manifest.c875427a08ba8c1283c8392879f99623.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "voicestudioapp"});
@@ -27,3 +27,7 @@ workbox.core.setCacheNameDetails({prefix: "voicestudioapp"});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute(/.*/, workbox.strategies.networkFirst({ "fetchOptions":{"credentials":"same-origin"}, plugins: [] }), 'GET');
+
+workbox.googleAnalytics.initialize({});
